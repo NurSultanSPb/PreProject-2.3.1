@@ -36,7 +36,7 @@ public class UsersDAOImpl implements UsersRepository{
     }
 
     @Override
-    public void update(int id, User updatedPerson) {
+    public void update(User updatedPerson) {
         entityManager.merge(updatedPerson);
     }
 

@@ -10,6 +10,6 @@ public interface UsersRepository {
     List<User> index();
     User show(int id);
     void save(User person);
-    void update(int id, User updatedPerson);
+    void update(User updatedPerson);
     void delete(int id);
 }
