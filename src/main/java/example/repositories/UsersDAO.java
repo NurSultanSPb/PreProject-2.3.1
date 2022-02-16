@@ -1,12 +1,10 @@
 package example.repositories;
 
 import example.models.User;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public interface UsersRepository {
+public interface UsersDAO {
     List<User> index();
     User show(int id);
     void save(User person);

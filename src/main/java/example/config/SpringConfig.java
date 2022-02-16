@@ -32,7 +32,6 @@ import java.util.Properties;
 @EnableWebMvc
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
-//@EnableJpaRepositories("example.repositories")
 public class SpringConfig implements WebMvcConfigurer {
 
     private final ApplicationContext applicationContext;

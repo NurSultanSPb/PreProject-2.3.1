@@ -1,21 +1,15 @@
 package example.repositories;
 
 import example.models.User;
-import org.hibernate.Transaction;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
-@Transactional
-public class UsersDAOImpl implements UsersRepository{
+public class UsersDAOImpl implements UsersDAO {
 
     @PersistenceContext
     private EntityManager entityManager;
