@@ -14,8 +14,8 @@ public class UserServiceImpl implements UserService {
     private final UsersDAO usersDAO;
 
     @Autowired
-    public UserServiceImpl(UsersDAO usersRepository) {
-        this.usersDAO = usersRepository;
+    public UserServiceImpl(UsersDAO usersDAO) {
+        this.usersDAO = usersDAO;
     }
 
     @Override
@@ -36,8 +36,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public void update(User updatedPerson) {
-        usersDAO.update(updatedPerson);
+    public void update(User updatedPerson, int id) {
+        usersDAO.update(updatedPerson, id);
     }
 
     @Override

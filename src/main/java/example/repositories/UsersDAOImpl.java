@@ -30,7 +30,8 @@ public class UsersDAOImpl implements UsersDAO {
     }
 
     @Override
-    public void update(User updatedPerson) {
+    public void update(User updatedPerson, int id) {
+        updatedPerson.setId(id);
         entityManager.merge(updatedPerson);
     }
 
